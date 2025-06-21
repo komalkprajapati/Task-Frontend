@@ -43,7 +43,7 @@ function App() {
           <div className="relative z-10 max-lg:text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white !leading-tight">
               Discover Your Next
-              <span className="text-green-400 block"> Adventure hello</span>
+              <span className="text-green-400 block"> Adventure hello komal</span>
             </h1>
             <div className="max-w-md md:max-w-3xl  mt-6">
 
