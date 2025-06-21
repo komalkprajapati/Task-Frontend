@@ -11,7 +11,7 @@ import { IoOptionsOutline } from "react-icons/io5";
 function App() {
 
 
-  const {data:dest , isLoading : isLodingDest ,error :errorDest} = useQuery({
+  const {data , isLoading : isLodingDest ,error :errorDest} = useQuery({
     queryKey:['destination'],
     queryFn: async()=>{
       const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/destination`)
@@ -74,7 +74,7 @@ function App() {
         <h5>plan your perfact trip with our most loved and best selling <span className='block'>tour package</span></h5>
 </div>
 <div className=' container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-10 '>
-      {dest?.map((d)=>{
+      {data?.map((d)=>{
         return <div key={d._id}
       className="bg-white [box-shadow:0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-2xl overflow-hidden mx-auto mt-4">
       <div className="aspect-[3/2]">
