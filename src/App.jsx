@@ -74,17 +74,17 @@ function App() {
         <h5>plan your perfact trip with our most loved and best selling <span className='block'>tour package</span></h5>
 </div>
 <div className=' container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-10 '>
-      {dest.map((d)=>{
-        return <div
-      class="bg-white [box-shadow:0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-2xl overflow-hidden mx-auto mt-4">
-      <div class="aspect-[3/2]">
-        <img src={d.image} class="w-full h-full object-cover rounded-2xl" />
+      {dest?.map((d)=>{
+        return <div key={d._id}
+      className="bg-white [box-shadow:0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-2xl overflow-hidden mx-auto mt-4">
+      <div className="aspect-[3/2]">
+        <img src={d.image} className="w-full h-full object-cover rounded-2xl" />
       </div>
 
-      <div class="p-6">
-        <div class=" flex items-center justify-between ">
-            <h3 class="text-lg  font-bold text-green-700">{d.name}</h3>
-            <h3 class="text-lg text-slate-900 font-bold ">₹{d.price}/-</h3>
+      <div className="p-6">
+        <div className=" flex items-center justify-between ">
+            <h3 className="text-lg  font-bold text-green-700">{d.name}</h3>
+            <h3 className="text-lg text-slate-900 font-bold ">₹{d.price}/-</h3>
         </div>
       </div>
 
@@ -139,15 +139,15 @@ function App() {
 </div>
 <div className=' container grid grid-cols-1 mx-auto md:grid-cols-2 lg:grid-cols-3 gap-10 '>
       {pack.map((d)=>{
-        return <div
-      class="bg-white [box-shadow:0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-2xl overflow-hidden mx-auto mt-4">
-      <div class="aspect-[3/2]">
-        <img src={d.image} class="w-full h-full object-cover rounded-2xl" />
+        return <div  key={d._id}
+      className="bg-white [box-shadow:0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-2xl overflow-hidden mx-auto mt-4">
+      <div className="aspect-[3/2]">
+        <img src={d.image} className="w-full h-full object-cover rounded-2xl" />
       </div>
 
-      <div class="p-6">
-        <h3 class="text-xl text-slate-900 font-bold text-center">{d.name}</h3>
-          <div class=" flex items-center my-2">
+      <div className="p-6">
+        <h3 className="text-xl text-slate-900 font-bold text-center">{d.name}</h3>
+          <div className=" flex items-center my-2">
           <button className="w-full flex items-center justify-center px-8 py-3 font-medium text-base tracking-wide rounded-full text-white bg-green-500  transition border-0 cursor-pointer">
                       view details
           </button>
@@ -160,133 +160,133 @@ function App() {
 
 
 {/* ---Testimonials--- */}
-<div class="p-4 max-w-6xl mx-auto container my-20">
-      <div class="max-w-2xl mx-auto text-center">
-        <h2 class="text-3xl font-bold text-slate-900 !leading-tight">What our happy client say</h2>
-        <p class="text-[15px] mt-6 leading-relaxed text-slate-600">See what our happy clients have to say. They’ve shared how our templates helped them launch quickly, look professional, and grow with ease.</p>
+<div className="p-4 max-w-6xl mx-auto container my-20">
+      <div className="max-w-2xl mx-auto text-center">
+        <h2 className="text-3xl font-bold text-slate-900 !leading-tight">What our happy client say</h2>
+        <p className="text-[15px] mt-6 leading-relaxed text-slate-600">See what our happy clients have to say. They’ve shared how our templates helped them launch quickly, look professional, and grow with ease.</p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 max-md:justify-center text-center max-lg:max-w-3xl max-md:max-w-lg mx-auto mt-16">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 max-md:justify-center text-center max-lg:max-w-3xl max-md:max-w-lg mx-auto mt-16">
         <div>
-          <div class="flex flex-col items-center">
-            <img src="https://readymadeui.com/team-2.webp" class="w-24 h-24 rounded-full border-2 border-purple-600" />
-            <div class="mt-6">
-              <h4 class="text-base font-semibold text-slate-900">John Doe</h4>
+          <div className="flex flex-col items-center">
+            <img src="https://readymadeui.com/team-2.webp" className="w-24 h-24 rounded-full border-2 border-purple-600" />
+            <div className="mt-6">
+              <h4 className="text-base font-semibold text-slate-900">John Doe</h4>
             </div>
           </div>
 
-          <div class="flex justify-center space-x-1 mt-3">
-            <svg class="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
+          <div className="flex justify-center space-x-1 mt-3">
+            <svg className="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
             </svg>
-            <svg class="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
+            <svg className="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
             </svg>
-            <svg class="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
+            <svg className="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
             </svg>
-            <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
+            <svg className="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
             </svg>
-            <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
+            <svg className="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
             </svg>
           </div>
 
-          <div class="mt-6">
-            <p class="text-[15px] leading-relaxed text-slate-700 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis at natus assumenda sunt dolorum sit consequatur nihil ullam molestias. Vel?</p>
+          <div className="mt-6">
+            <p className="text-[15px] leading-relaxed text-slate-700 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis at natus assumenda sunt dolorum sit consequatur nihil ullam molestias. Vel?</p>
           </div>
         </div>
 
         <div>
-          <div class="flex flex-col items-center">
-            <img src="https://readymadeui.com/team-3.webp" class="w-24 h-24 rounded-full border-2 border-purple-600" />
-            <div class="mt-6">
-              <h4 class="text-base font-semibold text-slate-900">Mark Adair</h4>
+          <div className="flex flex-col items-center">
+            <img src="https://readymadeui.com/team-3.webp" className="w-24 h-24 rounded-full border-2 border-purple-600" />
+            <div className="mt-6">
+              <h4 className="text-base font-semibold text-slate-900">Mark Adair</h4>
             </div>
           </div>
 
-          <div class="flex justify-center space-x-1 mt-3">
-            <svg class="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
+          <div className="flex justify-center space-x-1 mt-3">
+            <svg className="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
             </svg>
-            <svg class="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
+            <svg className="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
             </svg>
-            <svg class="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
+            <svg className="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
             </svg>
-            <svg class="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
+            <svg className="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
             </svg>
-            <svg class="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
+            <svg className="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
             </svg>
           </div>
 
-          <div class="mt-6">
-            <p class="text-[15px] leading-relaxed text-slate-700 font-normal">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est qui quis temporibus fugit facere labore cupiditate modi iure eius eos!</p>
+          <div className="mt-6">
+            <p className="text-[15px] leading-relaxed text-slate-700 font-normal">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est qui quis temporibus fugit facere labore cupiditate modi iure eius eos!</p>
           </div>
         </div>
 
         <div>
-          <div class="flex flex-col items-center">
-            <img src="https://readymadeui.com/team-4.webp" class="w-24 h-24 rounded-full border-2 border-purple-600" />
-            <div class="mt-6">
-              <h4 class="text-base font-semibold text-slate-900">Simon Konecki</h4>
+          <div className="flex flex-col items-center">
+            <img src="https://readymadeui.com/team-4.webp" className="w-24 h-24 rounded-full border-2 border-purple-600" />
+            <div className="mt-6">
+              <h4 className="text-base font-semibold text-slate-900">Simon Konecki</h4>
             </div>
           </div>
 
-          <div class="flex justify-center space-x-1 mt-3">
-            <svg class="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
+          <div className="flex justify-center space-x-1 mt-3">
+            <svg className="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
             </svg>
-            <svg class="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
+            <svg className="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
             </svg>
-            <svg class="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
+            <svg className="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
             </svg>
-            <svg class="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
+            <svg className="w-4 h-4 fill-purple-600" viewBox="0 0 14 13" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
             </svg>
-            <svg class="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
+            <svg className="w-4 fill-[#CED5D8]" viewBox="0 0 14 13" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7 0L9.4687 3.60213L13.6574 4.83688L10.9944 8.29787L11.1145 12.6631L7 11.2L2.8855 12.6631L3.00556 8.29787L0.342604 4.83688L4.5313 3.60213L7 0Z" />
             </svg>
           </div>
 
-          <div class="mt-6">
-            <p class="text-[15px] leading-relaxed text-slate-700 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis tempora ipsam voluptatem eius saepe quidem veniam itaque tenetur accusantium dolor.</p>
+          <div className="mt-6">
+            <p className="text-[15px] leading-relaxed text-slate-700 font-normal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis tempora ipsam voluptatem eius saepe quidem veniam itaque tenetur accusantium dolor.</p>
           </div>
 
         </div>
