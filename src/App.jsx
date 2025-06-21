@@ -11,7 +11,7 @@ import { IoOptionsOutline } from "react-icons/io5";
 function App() {
 
 
-  const {data , isLoading : isLodingDest ,error :errorDest} = useQuery({
+  const {data:dest , isLoading : isLodingDest ,error :errorDest} = useQuery({
     queryKey:['destination'],
     queryFn: async()=>{
       const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/destination`)
@@ -43,7 +43,7 @@ function App() {
           <div className="relative z-10 max-lg:text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white !leading-tight">
               Discover Your Next
-              <span className="text-green-400 block"> Adventure</span>
+              <span className="text-green-400 block"> Adventure hello</span>
             </h1>
             <div className="max-w-md md:max-w-3xl  mt-6">
 
@@ -74,7 +74,7 @@ function App() {
         <h5>plan your perfact trip with our most loved and best selling <span className='block'>tour package</span></h5>
 </div>
 <div className=' container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-10 '>
-      {data?.map((d)=>{
+      {dest?.map((d)=>{
         return <div key={d._id}
       className="bg-white [box-shadow:0_4px_12px_-5px_rgba(0,0,0,0.4)] w-full max-w-sm rounded-2xl overflow-hidden mx-auto mt-4">
       <div className="aspect-[3/2]">
